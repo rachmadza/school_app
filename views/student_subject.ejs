@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Add New Student</title>
+  </head>
+  <body>
+    <h1>Add Subject to Student</h1>
+    <form method="POST" action="/students/<%=student.id%>/add-subject">
+      First name: <%= student.first_name%>
+      <br>
+      Last name: <%= student.last_name%>
+      <br>
+      E-mail: <%= student.email%>
+      <br><br>
+      <select name="subjectid">
+        <%subjects.forEach(subject => { %>
+          <option value= <%=subject.id%>><%=subject.subject_name%></option>
+        <%})%>
+        </select>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

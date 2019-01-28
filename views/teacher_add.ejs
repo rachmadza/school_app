@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Add New Teacher</title>
+  </head>
+  <body>
+    <h1>Add Teacher</h1>
+    <%if(err !== null) { %>
+      <p><%= err %></p>
+    <% } %>
+    
+    <form method="POST" action="/teachers/add">
+      First name:<br>
+      <input type="text" name="first_name">
+      <br>
+      Last name:<br>
+      <input type="text" name="last_name">
+      <br>
+      E-mail:<br>
+      <input type="text" name="email">
+      <br>
+      SubjectId:<br>
+      <input type="text" name="SubjectId">
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
